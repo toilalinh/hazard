@@ -42,7 +42,8 @@ include_once '../config/config.php';
                     <img class="icon" src="../resource/views/images/book-icon.png" />
                     <p class="title">LÝ THUYẾT</p>
                     <div class="paragraph">If your image is an SVG, which is a variable-sized vector image format you can have the expansion.</div>
-                    <button name="luyen_ngay"><img class="btn-action" src="../resource/views/images/luyen-ngay-button.png" /></button>
+                    <button name="luyen_ngay" class="btn-hazard">Luyện ngay &gt;&gt;</button>
+
                 </div>
 
             </div>
@@ -53,7 +54,7 @@ include_once '../config/config.php';
                     <img class="icon" src="../resource/views/images/car-icon.png" />
                     <p class="title">THỰC HÀNH</p>
                     <div class="paragraph">If your image is an SVG, which is a variable-sized vector image format you can have the expansion.</div>
-                    <button name="lai_ngay"><img class="btn-action" src="../resource/views/images/lai-ngay-icon.png" /></button>
+                    <button name="lai_ngay" class="btn-hazard">Lái ngay &gt;&gt;</button>
                 </div>
 
             </div>

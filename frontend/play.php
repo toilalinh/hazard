@@ -84,7 +84,7 @@ include_once '../core/database.php';
                          </div>
                          <div class="game-info-button">
                              <input type="hidden" name="base_url" value="<?php echo $base_url; ?>" />
-                             <button name="playanother"><img src="../resource/views/images/stop_n_selected_another_btn.png" style="width:100%;height:45px;" /> </button>
+                             <button name="playanother">Dừng lại và chọn game khác</button>
                          </div>
                      </td>
                  </tr>

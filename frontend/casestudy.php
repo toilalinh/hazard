@@ -78,7 +78,7 @@ $arrCasestudy = $oCasestudy->getRecordByPage($curr_page,$limit);
                             <h4 style="text-transform: uppercase;"><?php echo $row['title']; ?></h4>
                             <p><img src="../resource/views/images/calendar-icon.png" />&nbsp;&nbsp;<?php echo $row['date_change']; ?> </p>
                             <p class="lythuyet-tomtat"><?php echo $row['summary']; ?></p>
-                            <a href="<?php echo $base_url; ?>frontend/casestudy_detail.php?id=<?php echo $row['id']; ?>"><img src="../resource/views/images/read-more-button.png" /></a>
+                            <a class="btn-hazard" href="<?php echo $base_url; ?>frontend/casestudy_detail.php?id=<?php echo $row['id']; ?>">Đọc thêm &gt;&gt;</a>
 
                         </div>
                         <div class="clearfix"></div>

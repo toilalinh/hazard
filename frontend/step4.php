@@ -64,9 +64,9 @@ include_once '../core/database.php';
                 <table>
                     <tr>
                         <input type="hidden" name="base_url" value="<?php echo $base_url; ?>" />
-                        <td class="left-btn"><button name="btn-left"><img id="left-btn" src="../resource/views/images/tro_ve_btn.png" /></button> </td>
+                        <td class="left-btn"><button name="btn-left">&lt;&lt; Trở về</button></td>
                         <td class="middle-btn"><img src="../resource/views/images/game_rule_text.png" /> </td>
-                        <td class="right-btn"><button name="btn-right"><img id="right-btn" src="../resource/views/images/tiep_tuc_btn.png" /></button></td>
+                        <td class="right-btn"><button name="btn-right">Tiếp tục &gt;&gt;</button></td>
                     </tr>
                 </table>
             </div>
