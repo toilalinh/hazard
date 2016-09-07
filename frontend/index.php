@@ -1,5 +1,44 @@
 <?php
 include_once '../config/config.php';
+
+$dir    = '../resource/background-home';
+$fileSystemIterator = new FilesystemIterator($dir);
+
+$aBackgroundImg = array();
+foreach ($fileSystemIterator as $fileInfo){
+    $temp = $fileInfo->getFilename();
+    if(strpos($temp, '.png') !== false || strpos($temp, '.jpg') !== false || strpos($temp, '.jpeg') !== false){
+        $aBackgroundImg[] = $temp;
+    }
+}
+
+$bg_img_filename = '';
+if(count($aBackgroundImg)>0){
+      $bg_img_filename = $aBackgroundImg[0];
+}
+
+if(empty($bg_img_filename)){
+    $bg_path = '../resource/views/images/hazard_bg.png';
+}else{
+    $bg_path = '../resource/background-home/' . $bg_img_filename;
+}
+
+//get logos
+$fileSystemIterator = new FilesystemIterator('../resource/logos');
+
+$aLogo = array();
+$cnt = 1;
+foreach ($fileSystemIterator as $fileInfo){
+    if($cnt>10){
+        break;
+    }
+    $temp = $fileInfo->getFilename();
+    if(strpos($temp, '.png') !== false || strpos($temp, '.jpg') !== false || strpos($temp, '.jpeg') !== false){
+        $aLogo[] = $temp;
+        $cnt++;
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +57,7 @@ include_once '../config/config.php';
 </head>
 <body>
 
-<div class="container-fluid" id="homepage">
+<div class="container-fluid" id="homepage" style="background:url('<?php echo $bg_path; ?>') no-repeat center center scroll; background-size:cover;">
 
     <div id="header">
         <div id="logo"><img src="../resource/views/images/hazard_slogun.png" /> </div>
@@ -81,22 +120,17 @@ include_once '../config/config.php';
 
         </script>
 
-        <div class="sponsor">
-            <p>Đơn vị đồng hành</p>
-            <div class="sponsor-logos">
-                <img src="../resource/logos/Daewoo_logo.png" width="60px" />
-                <img src="../resource/logos/Honda_logo.png" width="60px" />
-                <img src="../resource/logos/Ford_logo.png" width="100px" height="45px" />
-                <img src="../resource/logos/Audi-Logo-old.png" />
-                <img src="../resource/logos/suzuki_logo.png" />
-                <img src="../resource/logos/Toyota_logo.png" />
-                <img src="../resource/logos/bmw-logo.png" />
-                <img src="../resource/logos/Mazda_logo.png" />
-                <img src="../resource/logos/Mitsubishi_logo.png" />
-                <img src="../resource/logos/lexus_logo.png" width="100px" />
-                <img src="../resource/logos/Volkswagen_Logo.png" />
+        <?php if(count($aLogo)>0){ ?>
+            <div class="sponsor">
+                <p>Đơn vị đồng hành</p>
+                <div class="sponsor-logos">
+                    <?php foreach($aLogo as $logo){ ?>
+                        <img src="../resource/logos/<?php echo $logo; ?>" />
+                    <?php } ?>
+                </div>
             </div>
-        </div>
+        <?php } ?>
+
     </div>
     <div id="footer">
         <div class="inner-footer">
