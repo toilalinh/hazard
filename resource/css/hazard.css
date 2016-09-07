@@ -1003,6 +1003,84 @@ button#btn-begin{
 
     }
 
+    button[name=btn-left],
+    button[name=btn-right]{
+    display:block;
+    text-align: center;
+    height:38px;
+    width:105px;
+    line-height: 38px;
+    border:none;
+}
+
+button[name=btn-left]:hover,
+button[name=btn-right]:hover{
+   color:white;
+}
+
+
+button[name=btn-left]{
+    background:transparent url('../views/images/tro_ve_btn.png') no-repeat;
+    background-size:cover;
+    float:left;
+    margin-left:7px;
+    color:#424242;
+}
+
+button[name=btn-right]{
+    background:transparent url('../views/images/tiep_tuc_btn.png') no-repeat;
+    background-size:cover;
+    float:right;
+    margin-right:7px;
+    color:#62520d;
+}
+
+.game-info-button{
+    height:11%;
+}
+
+.btn-hazard {
+    background:transparent url('../views/images/orange_button_bg.png') no-repeat;
+    background-size:cover;
+    text-align: center;
+    border:none;
+    color:#62520d;
+    width:160px;
+    height:40px;
+}
+
+a.btn-hazard {
+    display:inline-block;
+    line-height: 40px;
+}
+
+.btn-hazard:hover{
+    color:white;
+    text-decoration: none;
+}
+
+button[name=luyen_ngay], button[name=lai_ngay]{
+    margin:auto;
+    display:block;
+}
+
+button[name=playanother]{
+    display:block;
+    text-align: center;
+    font-size: 14px;
+    width:260px;
+    height:55px;
+    color:#62520d;
+    border:none;
+    background:transparent url('../views/images/stop_chon_game_khac.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+button[name=playanother]:hover{
+    color:white;
+}
+
+
 }
 
 
